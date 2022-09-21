@@ -69,6 +69,8 @@ class RasterSource extends AbstractSource {
      * source is part of a map view’s style and the map view’s attribution button is pressed.
      */
     attribution: PropTypes.string,
+
+    bounds: PropTypes.arrayOf(PropTypes.number),
   };
 
   static defaultProps = {
@@ -105,7 +107,8 @@ class RasterSource extends AbstractSource {
       tileSize: this.props.tileSize,
       tms: this.props.tms,
       attribution: this.props.attribution,
-    };
+      bounds: this.props.bounds,
+  };
     return (
       <RCTMGLRasterSource ref="nativeSource" {...props}>
         {cloneReactChildrenWithProps(this.props.children, {

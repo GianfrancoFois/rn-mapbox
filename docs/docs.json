@@ -3620,6 +3620,18 @@
         "type": "string",
         "default": "none",
         "description": "An HTML or literal text string defining the buttons to be displayed in an action sheet when the\nsource is part of a map view’s style and the map view’s attribution button is pressed."
+      },
+      {
+        "name": "bounds",
+        "required": false,
+        "type": {
+          "name": "array",
+          "value": {
+            "type": "number"
+          }
+        },
+        "default": "none",
+        "description": "FIX ME NO DESCRIPTION"
       }
     ],
     "composes": [
