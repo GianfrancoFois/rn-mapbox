@@ -33,6 +33,11 @@ public class RCTMGLRasterSource extends RCTMGLTileSource<RasterSource> {
         mTileSize = tileSize;
     }
 
+    public void setBounds(Float... bounds) {
+        this.bounds = bounds;
+    }
+
+
     @Override
     public boolean hasPressListener() {
         return false;

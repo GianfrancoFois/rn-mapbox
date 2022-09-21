@@ -14,6 +14,7 @@ public abstract class RCTMGLTileSource<T extends Source> extends RCTSource<T> {
     private String mURL;
     private Collection<String> mTileUrlTemplates;
     private String mAttribution;
+    protected Float[] bounds;
 
     private Integer mMinZoomLevel;
     private Integer mMaxZoomLevel;
@@ -90,6 +91,10 @@ public abstract class RCTMGLTileSource<T extends Source> extends RCTSource<T> {
 
         if (mAttribution != null) {
             tileSet.setAttribution(mAttribution);
+        }
+
+        if(bounds != null) {
+            tileSet.setBounds(bounds);
         }
 
         return tileSet;

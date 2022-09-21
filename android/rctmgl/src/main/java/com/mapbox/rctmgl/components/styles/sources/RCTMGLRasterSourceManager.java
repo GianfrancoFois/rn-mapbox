@@ -32,6 +32,11 @@ public class RCTMGLRasterSourceManager extends RCTMGLTileSourceManager<RCTMGLRas
         return new RCTMGLRasterSource(reactContext);
     }
 
+    @ReactProp(name="bounds")
+    public void setBounds(RCTMGLRasterSource source, Float... bounds) {
+        source.setBounds(bounds);
+    }
+
     @ReactProp(name="tileSize")
     public void setTileSize(RCTMGLRasterSource source, int tileSize) {
         source.setTileSize(tileSize);
